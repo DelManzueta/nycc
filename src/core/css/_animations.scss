@@ -1,0 +1,51 @@
+@keyframes plane-move {
+	to {
+		transform: translate(100vw, -100px);
+	}
+}
+
+@keyframes clouds-move {
+	to {
+		transform: translateX(100vw);
+	}
+}
+
+@keyframes clouds-move-2 {
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+@keyframes clouds-move-3 {
+	to {
+		transform: translateX(110vw);
+	}
+}
+
+@keyframes boat-move {
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes vibrate-3 {
+	0% {
+		transform: translate(0);
+	}
+	// ... (other keyframes for vibrate-3)
+	100% {
+		transform: translate(0);
+	}
+}

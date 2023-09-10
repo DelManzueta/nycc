@@ -1,0 +1,99 @@
+.scene-bg {
+	display: flex;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.city,
+.plane,
+.boat,
+.cloud-1,
+.cloud-2,
+.cloud-3,
+.cloud-4,
+.cloud-5 {
+	position: absolute;
+}
+
+.city {
+	bottom: -3px;
+	width: 100vw;
+	height: 50%;
+	object-fit: cover;
+}
+
+.plane {
+	top: 20vh;
+	left: -50vw;
+	width: 40%;
+	animation: plane-move 15s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite both;
+}
+
+.cloud-1,
+.cloud-2,
+.cloud-3,
+.cloud-4,
+.cloud-5 {
+	width: auto;
+	height: auto;
+}
+
+.boat {
+	width: 30%;
+	bottom: 0;
+	right: -50px;
+	animation: boat-move 20s linear forwards;
+}
+
+@keyframes plane-move {
+	to {
+		transform: translate(100vw, -100px);
+	}
+}
+
+@keyframes boat-move {
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+.cloud-1 {
+	animation: clouds-move 50s infinite both;
+}
+
+.cloud-2 {
+	animation: clouds-move-2 185s infinite both;
+}
+
+.cloud-3 {
+	animation: clouds-move-2 100s infinite both;
+	z-index: -1;
+}
+
+.cloud-4 {
+	animation: clouds-move-3 50s linear forwards;
+}
+
+.cloud-5 {
+	animation: clouds-move 250s linear forwards;
+	z-index: -2;
+}
+
+@keyframes clouds-move {
+	to {
+		transform: translateX(100vw);
+	}
+}
+
+@keyframes clouds-move-2 {
+	to {
+		transform: translateX(-100vw);
+	}
+}
+
+@keyframes clouds-move-3 {
+	to {
+		transform: translateX(110vw);
+	}
+}
